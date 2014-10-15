@@ -10,7 +10,13 @@
 #import <Foundation/Foundation.h>
 
 #ifdef COCOAPODS
+# if __has_include("../Target Support Files/Pods/Pods-environment.h")
+#import "../Target Support Files/Pods/Pods-environment.h"
+# elif __has_include("../Pods-environment.h")
 #import "../Pods-environment.h"
+# else
+#error "Pods-environment.h not found"
+# endif
 #endif
 
 #if (TARGET_OS_IPHONE || defined(COCOAPODS_POD_AVAILABLE_JXLS))
