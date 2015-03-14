@@ -16,7 +16,4 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "6.1"
   s.osx.deployment_target = "10.7"
   s.exclude_files = "External/xlslib/xlslib/src/xlslib/cbridge.{h,cpp}"
-  s.subspec 'common' do |ss|
-    ss.source_files = "External/xlslib/xlslib/src/common/*.{h,cpp}"
-  end
 end
